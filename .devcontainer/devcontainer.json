@@ -1,0 +1,73 @@
+{
+	"name": "python",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.fontSize": 14,
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.organizeImports": true
+				},
+				"files.autoSave": "onFocusChange",
+				"python.autoComplete.extraPaths": [
+					"/usr/local/lib/python3.10/site-packages",
+					"/workspaces"
+				],
+				"isort.args": [
+					"--profile black",
+					"-sp .isort.cfg"
+				],
+				"python.pythonPath": "/usr/local/bin/python",
+				"python.linting.flake8Enabled": true,
+				"python.linting.enabled": true,
+				"python.linting.lintOnSave": true,
+				"python.linting.pylintEnabled": false,
+				"python.linting.flake8Args": [
+					"--ignore=E203,W503,W504",
+					"--max-line-length=119",
+					"--max-complexity=20"
+				],
+				"python.formatting.provider": "black",
+				"python.formatting.blackArgs": [
+					"--target-version=py310",
+					"--line-length=119"
+				],
+				"python.linting.mypyEnabled": true,
+				"cSpell.ignoreRegExpList": [
+					"[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"
+				],
+				"autoDocstring.docstringFormat": "google",
+				"editor.tabSize": 4,
+				"vscode-postgres.defaultDatabase": "store",
+				"vscode-postgres.defaultConnection": "postgresql://root:root@postgres:5432",
+				"python.analysis.typeCheckingMode": "basic",
+				"python.analysis.completeFunctionParens": true,
+				"python.analysis.autoImportUserSymbols": true,
+				"python.analysis.autoImportCompletions": true,
+				"python.analysis.addImport.exactMatchOnly": true,
+				"python.analysis.inlayHints.functionReturnTypes": true,
+				"python.analysis.inlayHints.pytestParameters": true,
+				"python.analysis.inlayHints.variableTypes": true
+			},
+			"extensions": [
+				"donjayamanne.python-environment-manager",
+				"IronGeek.vscode-env",
+				"KevinRose.vsc-python-indent",
+				"ms-azuretools.vscode-docker",
+				"MS-CEINTL.vscode-language-pack-ja",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"njpwerner.autodocstring",
+				"streetsidesoftware.code-spell-checker",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"ckolkman.vscode-postgres"
+			]
+		}
+	},
+	"forwardPorts": []
+}

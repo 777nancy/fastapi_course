@@ -1,0 +1,21 @@
+# default
+black
+isort
+mypy
+flake8
+pytest
+
+sqlalchemy
+databases[asyncpg]
+fastapi[all]
+psycopg2
+alembic
+python-decouple
+email-validator
+passlib[bclib]
+python-jose[cryptography]
+asyncclick
+boto3
+requests
+
+
